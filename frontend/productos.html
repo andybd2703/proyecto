@@ -6,6 +6,7 @@
     <title>Productos</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
         <link rel="icon" type="image/jpeg" href="../img/logocf.jpg">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <style>
         html {
@@ -151,5 +152,25 @@
             </div>
         </div>
     </div>
+    <button id="btnSubir" style="position: fixed; bottom: 20px; right: 20px; display: none; background-color: #6f4e37; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer; color: white; font-size: 24px;">
+  <i class="bi bi-arrow-up-circle"></i>
+</button>
+
 </body>
+<script>
+  // Mostrar botón solo cuando haces scroll hacia abajo
+  window.onscroll = function() {
+    const btn = document.getElementById("btnSubir");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      btn.style.display = "block";
+    } else {
+      btn.style.display = "none";
+    }
+  };
+
+  // Al dar click, sube suavemente hasta arriba
+  document.getElementById("btnSubir").addEventListener("click", function() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+</script>
 </html>
