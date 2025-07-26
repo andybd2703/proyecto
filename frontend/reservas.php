@@ -1,39 +1,73 @@
 <?php
-// Inicializar mensaje vacío
+// Carga PHPMailer (ajusta la ruta según dónde tengas PHPMailer)
+require __DIR__ . '/PHPMailer/src/PHPMailer.php';
+require __DIR__ . '/PHPMailer/src/SMTP.php';
+require __DIR__ . '/PHPMailer/src/Exception.php';
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
 $mensaje = "";
 
-// Procesar el formulario cuando se envíe
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Conectar a la base de datos
-    $conexion = new mysqli("localhost", "root", "yeison2006", "cafe", 3307); // ⚠️ Cambia estos datos
+    $conexion = new mysqli("localhost", "root", "yeison2006", "cafe", 3307);
 
-    // Verificar conexión
     if ($conexion->connect_error) {
         die("Error de conexión: " . $conexion->connect_error);
     }
 
-    // Recoger y limpiar los datos del formulario
     $nombre = $_POST['nombre'];
     $email = $_POST['email'];
     $fecha = $_POST['fecha'];
     $hora = $_POST['hora'];
+    $personas = $_POST['personas'];
 
-    // Preparar consulta segura
-    $stmt = $conexion->prepare("INSERT INTO reservas (nombre, email, fecha, hora) VALUES (?, ?, ?, ?)");
-    $stmt->bind_param("ssss", $nombre, $email, $fecha, $hora);
+    $stmt = $conexion->prepare("INSERT INTO reservas (nombre, email, fecha, hora, personas) VALUES (?, ?, ?, ?, ?)");
+    $stmt->bind_param("ssssi", $nombre, $email, $fecha, $hora, $personas);
 
-    // Ejecutar y verificar resultado
     if ($stmt->execute()) {
-        $mensaje = "✅ ¡Reserva guardada correctamente!";
+        // Guardado ok, enviamos correo
+        $mail = new PHPMailer(true);
+        try {
+            $mail->isSMTP();
+            $mail->Host = 'smtp.gmail.com';
+            $mail->SMTPAuth = true;
+            $mail->Username = 'andresaj400@gmail.com'; // tu correo
+            $mail->Password = 'cvik jyot vivd quou';   // tu app password
+            $mail->SMTPSecure = 'tls';
+            $mail->Port = 587;
+
+            $mail->setFrom('tucorreo@gmail.com', 'CAFE La Loma');
+            $mail->addAddress($email, $nombre);
+
+            $mail->isHTML(true);
+            $mail->Subject = '✅ TU RESERVA HA SIDO CONFIRMADA';
+            $mail->Body = "
+                <h2>¡Hola $nombre!</h2>
+                <p>Tu reserva ha sido confirmada con estos datos:</p>
+                <ul>
+                    <li><strong>Fecha:</strong> $fecha</li>
+                    <li><strong>Hora:</strong> $hora</li>
+                    <li><strong>Personas:</strong> $personas</li>
+                    <li><strong>Email:</strong> $email</li>
+                </ul>
+                <p>¡Te esperamos en Café La Loma!</p>
+            ";
+
+            $mail->send();
+            $mensaje = "✅ ¡Reserva guardada correctamente y correo enviado!";
+        } catch (Exception $e) {
+            $mensaje = "⚠️ Reserva guardada pero NO se pudo enviar el correo: {$mail->ErrorInfo}";
+        }
     } else {
         $mensaje = "❌ Error al guardar la reserva: " . $stmt->error;
     }
 
-    // Cerrar conexiones
     $stmt->close();
     $conexion->close();
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="es">
@@ -43,6 +77,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reserva Ahora</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="icon" type="image/jpeg" href="../img/logocf.jpg">
+
     <style>
         .bg-brown {
             background-color: #6f4e37 !important;
@@ -165,6 +201,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <div class="mb-3">
                     <label for="hora" class="form-label">Hora de Reserva</label>
                     <input type="time" class="form-control" id="hora" name="hora" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="personas" class="form-label">Número de Personas</label>
+                    <input type="number" class="form-control" id="personas" name="personas" min="1" max="20" required>
                 </div>
                 <button type="submit" class="btn btn-success w-100">Reservar Ahora</button>
             </form>
