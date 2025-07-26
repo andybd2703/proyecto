@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        html {
+  scroll-behavior: smooth;
+}
+
+        .bg-brown {
+            background-color: #6f4e37 !important; /* café oscuro bonito */
+            color: white; /* opcional: para que el texto se vea */
+        }
+        .navbar-brand{
+            color: white !important; /* Asegura que el texto del logo sea blanco */
+            font-family: Georgia, 'Times New Roman', Times, serif;
+
+        }
+
+        .navbar-nav .nav-link {
+            color: white !important; /* Asegura que los enlaces de navegación sean blancos */
+            font-family: Georgia, 'Times New Roman', Times, serif;
+
+        }   
+        .navbar-text {
+            background-color: #6f4e37;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 25px;
+            font-weight: bold;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-align: center;
+        }
+
+        .carousel-inner {
+            height: 350px; /* un poco más bajito para que se vea formal */
+            max-width: 1200px;
+            margin: 0 auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .carousel img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-brown">
+        <div class="container">
+            <a class="navbar-brand">☕ Café La Loma</a>
+            <button class="navbar-toggler" ...></button>
+            <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                        <a class="nav-link" href="index.html">Historia</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="#productos">Productos</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="#">Reservas</a>
+                        </li>
+            </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5 d-flex justify-content-center">
+        <div class="card shadow-lg border-0 rounded-4 p-4" style="max-width: 900px; background: #f8f5f2;">
+            <h2 class="text-center mb-4" style="color: #6f4e37; font-family: Georgia, 'Times New Roman', Times, serif;">Galería de Productos</h2>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="Producto 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Producto 1</h5>
+                            <p class="card-text">Descripción breve del producto 1.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="Producto 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Producto 2</h5>
+                            <p class="card-text">Descripción breve del producto 2.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="Producto 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Producto 3</h5>
+                            <p class="card-text">Descripción breve del producto 3.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="Producto 4">
+                        <div class="card-body">
+                            <h5 class="card-title">Producto 4</h5>
+                            <p class="card-text">Descripción breve del producto 4.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://images.unsplash.com/photo-1517685352821-92cf88aee5a5?auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="Producto 5">
+                        <div class="card-body">
+                            <h5 class="card-title">Producto 5</h5>
+                            <p class="card-text">Descripción breve del producto 5.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://images.unsplash.com/photo-1465101178521-c1a9136a3b99?auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="Producto 6">
+                        <div class="card-body">
+                            <h5 class="card-title">Producto 6</h5>
+                            <p class="card-text">Descripción breve del producto 6.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="Producto 7">
+                        <div class="card-body">
+                            <h5 class="card-title">Producto 7</h5>
+                            <p class="card-text">Descripción breve del producto 7.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="Producto 8">
+                        <div class="card-body">
+                            <h5 class="card-title">Producto 8</h5>
+                            <p class="card-text">Descripción breve del producto 8.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="Producto 9">
+                        <div class="card-body">
+                            <h5 class="card-title">Producto 9</h5>
+                            <p class="card-text">Descripción breve del producto 9.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="Producto 10">
+                        <div class="card-body">
+                            <h5 class="card-title">Producto 10</h5>
+                            <p class="card-text">Descripción breve del producto 10.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="Producto 11">
+                        <div class="card-body">
+                            <h5 class="card-title">Producto 11</h5>
+                            <p class="card-text">Descripción breve del producto 11.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="Producto 12">
+                        <div class="card-body">
+                            <h5 class="card-title">Producto 12</h5>
+                            <p class="card-text">Descripción breve del producto 12.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

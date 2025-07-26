@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .bg-brown {
+            background-color: #6f4e37 !important; /* café oscuro bonito */
+            color: white; /* opcional: para que el texto se vea */
+        }
+        .navbar-brand{
+            color: white !important; /* Asegura que el texto del logo sea blanco */
+            font-family: Georgia, 'Times New Roman', Times, serif;
+
+        }
+
+        .navbar-nav .nav-link {
+            color: white !important; /* Asegura que los enlaces de navegación sean blancos */
+            font-family: Georgia, 'Times New Roman', Times, serif;
+
+        }   
+        .navbar-text {
+            background-color: #6f4e37;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 25px;
+            font-weight: bold;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-align: center;
+        }
+        .title{
+            text-align: center;
+            font-size: 2.5rem;
+            margin-top: 20px;
+            color: #6f4e37; /* Color café oscuro */
+        }
+
+        .fuente-contacto {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 1.1rem; 
+            color: #4b2e19;
+        }
+        .fuente-contacto h3, .fuente-contacto h4{
+            font-weight: 900;
+            margin-bottom: 1rem;
+            margin-top: 1rem;
+        }
+        .fuente-contacto h3 {
+            font-size: 2rem;
+        }
+        .fuente-contacto h4 {
+            font-size: 1.3rem;
+        }
+        .bg-light {
+            background-color: #f9f6f3 !important;
+        }
+        @media (min-width: 768px) {
+          .contacto-separador {
+            border-left: 2px solid #e0d6cf;
+          }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-brown">
+        <div class="container">
+            <a class="navbar-brand">☕ Café La Loma</a>
+            <button class="navbar-toggler" ...></button>
+            <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                        <a class="nav-link" href="index.html">Historia</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="productos.html">Productos</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="#">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="#">Reservas</a>
+                        </li>
+            </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <h1 class="title">¡Contáctanos!</h1>
+
+    <div>
+        <div class="row">
+            <!-- Parte izquierda: Mapa de Google Maps -->
+            <div class="col-md-6 mb-4">
+                <div class="ratio ratio-4x3">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3048.8587797851483!2d-76.5015091017752!3d3.469814016776716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sus!4v1753548411044!5m2!1ses-419!2sus" 
+                        width="600" 
+                        height="450" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        aria-label="Ubicación en Google Maps">
+                    </iframe>
+                </div>
+            </div>
+            <!-- Parte derecha: Información de dirección y horarios -->
+            <div class="col-md-6 d-flex flex-column justify-content-center p-4 bg-light rounded shadow text-center fuente-contacto contacto-separador">
+                <h3><i class="bi bi-geo-alt-fill"></i> Dirección</h3>
+                <p>
+                    Calle Ficticia 123,<br>
+                    Colonia Centro,<br>
+                    Ciudad, País<br>
+                    CP 12345
+                </p>
+                <h4><i class="bi bi-clock-fill"></i> Horarios de Atención</h4>
+                <ul class="list-unstyled">
+                    <li>Lunes a Viernes: 8:00 am - 8:00 pm</li>
+                    <li>Sábado: 9:00 am - 6:00 pm</li>
+                    <li>Domingo: Cerrado</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+    </div>
+    
+</body>
+</html>
