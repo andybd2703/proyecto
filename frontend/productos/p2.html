@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Producto 1 | Café La Loma</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .bg-brown {
+            background-color: #6f4e37 !important;
+            color: white;
+        }
+        .navbar-brand {
+            color: white !important;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        .navbar-nav .nav-link {
+            color: white !important;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        .navbar-text {
+            background-color: #6f4e37;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 25px;
+            font-weight: bold;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-align: center;
+        }
+        .card-producto {
+            max-width: 700px;
+            margin: 40px auto;
+            background: #f8f5f2;
+            border-radius: 18px;
+            box-shadow: 0 8px 32px 0 rgba(111, 78, 55, 0.15);
+            padding: 0;
+        }
+        .card-producto img {
+            border-top-left-radius: 18px;
+            border-bottom-left-radius: 18px;
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+        .card-body {
+            padding: 2rem;
+        }
+        .precio {
+            color: #6f4e37;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-top: 1rem;
+        }
+        @media (max-width: 767px) {
+            .card-producto {
+                flex-direction: column !important;
+            }
+            .card-producto img {
+                border-radius: 18px 18px 0 0;
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-brown">
+        <div class="container">
+            <a class="navbar-brand">☕ Café La Loma</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Historia</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../productos.html">Productos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../contacto.html">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../reservas.php">Reservas</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <div class="card-producto d-flex flex-column flex-md-row shadow-lg border-0">
+            <div class="col-12 col-md-5 p-0">
+                <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" class="card-img-top h-100 w-100" alt="Producto 2" style="object-fit:cover;">
+            </div>
+            <div class="col-12 col-md-7 card-body d-flex flex-column justify-content-center">
+                <h2 style="color: #6f4e37; font-family: Georgia, 'Times New Roman', Times, serif;">Café Especial La Loma</h2>
+                <p>
+                    Disfruta de nuestro café especial, cultivado en las montañas colombianas y seleccionado a mano para garantizar el mejor sabor y aroma. Perfecto para los amantes del café que buscan una experiencia única y auténtica.
+                </p>
+                <div class="precio">Valor: $18.000 COP</div>
+                <a href="../productos.html" class="btn btn-outline-secondary mt-4" style="border-radius: 10px;">Volver a productos</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
