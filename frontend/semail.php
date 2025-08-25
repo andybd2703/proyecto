@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $mail->addAddress($email, $nombre);
 
         $mail->isHTML(true);
-        $mail->Subject = '✅ TU RESERVA HA SIDO CONFIRMADA';
+        $mail->Subject = 'TU RESERVA HA SIDO CONFIRMADA';
         $mail->Body = "
             <h2>¡Hola $nombre!</h2>
             <p>Tu reserva ha sido confirmada con estos datos:</p>
