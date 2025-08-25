@@ -1,161 +1,161 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Café La Loma</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Café La Loma</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
-    <link rel="icon" type="image/jpeg" href="../img/logocf.jpg">
-    <style>
-        html {
-  scroll-behavior: smooth;
-}
-
-        .bg-brown {
-            background-color: #6f4e37 !important; /* café oscuro bonito */
-            color: white; /* opcional: para que el texto se vea */
-        }
-        .navbar-brand{
-            color: white !important; /* Asegura que el texto del logo sea blanco */
-            font-family: Georgia, 'Times New Roman', Times, serif;
-
-        }
-
-        .navbar-nav .nav-link {
-            color: white !important; /* Asegura que los enlaces de navegación sean blancos */
-            font-family: Georgia, 'Times New Roman', Times, serif;
-
-        }   
-        .navbar-text {
-            background-color: #6f4e37;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            font-size: 25px;
-            font-weight: bold;
-            font-family: Georgia, 'Times New Roman', Times, serif;
-            text-align: center;
-        }
-
-        .carousel-inner {
-            height: 350px; /* un poco más bajito para que se vea formal */
-            max-width: 1200px;
-            margin: 0 auto;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-        }
-        .carousel img {
-            object-fit: cover;
-            height: 100%;
-            width: 100%;
-            border-radius: 10px;
-        }
-
-    </style>
-</head>
-<body>
-    <nav class="navbar navbar-expand-lg bg-brown">
-        <div class="container">
-            <a class="navbar-brand">☕ Café La Loma</a>
-            <button class="navbar-toggler" ...></button>
-            <div class="collapse navbar-collapse" id="navbarText">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                        <a class="nav-link" href="#historia">Historia</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="productos.html">Productos</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="contacto.html">Contacto</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="reservas.php">Reservas</a>
-                        </li>
-            </ul>
-            </div>
-        </div>
-</nav>
-    
-    
-    <div class="d-flex justify-content-center my-3">
-        <span class="navbar-text">¡Bienvenido a nuestro café!</span>
-    </div>
-
-    <div class="container my-4">
-        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner" style="height: 400px;">
-                <div class="carousel-item active">
-                    <img src="../img/cafe.jpg" class="d-block w-100 h-100 object-fit-cover rounded shadow" alt="Café">
-                </div>
-                <div class="carousel-item">
-                    <img src="../img/Historia-del-cafe-en-Colombia-cafemalist-1.jpg" class="d-block w-100 h-100 object-fit-cover rounded shadow" alt="Historia del café">
-                </div>
-                <div class="carousel-item">
-                    <img src="../img/delicious-organic-coffee-still-life_23-2151762341.avif" class="d-block w-100 h-100 object-fit-cover rounded shadow" alt="Café orgánico">
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Anterior</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Siguiente</span>
-            </button>
-        </div>
-    </div>
-
-    <div class="container my-5" id="historia">
-    <div class="card shadow-lg border-0 rounded-4 mx-auto" style="max-width: 900px; background: #f8f5f2;">
-        <div class="row g-0 align-items-center">
-            <div class="col-md-7">
-                <div class="card-body p-5">
-                    <h2 class="card-title text-center mb-4" style="color: #6f4e37; font-family: Georgia, 'Times New Roman', Times, serif;">
-                        Nuestra Historia
-                    </h2>
-                    <p class="card-text fs-5 text-center text-md-start" style="font-family: Georgia, 'Times New Roman', Times, serif;">
-                        Café La Loma nació en 1986 como un pequeño sueño familiar en las montañas cafeteras de Colombia. Inspirados por el amor al café y la tradición de nuestra tierra, comenzamos tostando granos seleccionados a mano en una humilde cocina.<br><br>
-                        Con dedicación y pasión, fuimos creciendo y perfeccionando nuestras recetas, siempre priorizando la calidad y el trato cercano con nuestros clientes.<br><br>
-                        Hoy, más de tres décadas después, seguimos siendo un punto de encuentro para quienes buscan disfrutar de un café auténtico, rodeados de historia y calidez.<br><br>
-                        <strong>¡Gracias por ser parte de nuestra historia!</strong>
-                    </p>
-                </div>
-            </div>
-            <div class="col-md-5 text-center">
-                <img src="../img/tienda.jpg" alt="tienda" class="img-fluid rounded-end-4 shadow mt-4 mt-md-0" style="max-width: 100%; height: auto;">
-            </div>
-        </div>
-    </div>
-</div>
-<button id="btnSubir" style="position: fixed; bottom: 20px; right: 20px; display: none; background-color: #6f4e37; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer; color: white; font-size: 24px;">
-  <i class="bi bi-arrow-up-circle"></i>
-</button>
-
-
-</body>
-<script>
-  // Mostrar botón solo cuando haces scroll hacia abajo
-  window.onscroll = function() {
-    const btn = document.getElementById("btnSubir");
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-      btn.style.display = "block";
-    } else {
-      btn.style.display = "none";
+        <link rel="icon" type="image/jpeg" href="../img/logocf.jpg">
+        <style>
+            html {
+    scroll-behavior: smooth;
     }
-  };
 
-  // Al dar click, sube suavemente hasta arriba
-  document.getElementById("btnSubir").addEventListener("click", function() {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
-</script>
-</html>
+            .bg-brown {
+                background-color: #6f4e37 !important; /* café oscuro bonito */
+                color: white; /* opcional: para que el texto se vea */
+            }
+            .navbar-brand{
+                color: white !important; /* Asegura que el texto del logo sea blanco */
+                font-family: Georgia, 'Times New Roman', Times, serif;
+
+            }
+
+            .navbar-nav .nav-link {
+                color: white !important; /* Asegura que los enlaces de navegación sean blancos */
+                font-family: Georgia, 'Times New Roman', Times, serif;
+
+            }   
+            .navbar-text {
+                background-color: #6f4e37;
+                color: white;
+                padding: 10px 20px;
+                border-radius: 5px;
+                font-size: 25px;
+                font-weight: bold;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                text-align: center;
+            }
+
+            .carousel-inner {
+                height: 350px; /* un poco más bajito para que se vea formal */
+                max-width: 1200px;
+                margin: 0 auto;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            }
+            .carousel img {
+                object-fit: cover;
+                height: 100%;
+                width: 100%;
+                border-radius: 10px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg bg-brown">
+            <div class="container">
+                <a class="navbar-brand">☕ Café La Loma</a>
+                <button class="navbar-toggler" ...></button>
+                <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                            <a class="nav-link" href="#historia">Historia</a>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link" href="productos.html">Productos</a>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">Contacto</a>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link" href="reservas.php">Reservas</a>
+                            </li>
+                </ul>
+                </div>
+            </div>
+    </nav>
+        
+        
+        <div class="d-flex justify-content-center my-3">
+            <span class="navbar-text">¡Bienvenido a nuestro café!</span>
+        </div>
+
+        <div class="container my-4">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner" style="height: 400px;">
+                    <div class="carousel-item active">
+                        <img src="../img/cafe.jpg" class="d-block w-100 h-100 object-fit-cover rounded shadow" alt="Café">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../img/Historia-del-cafe-en-Colombia-cafemalist-1.jpg" class="d-block w-100 h-100 object-fit-cover rounded shadow" alt="Historia del café">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../img/delicious-organic-coffee-still-life_23-2151762341.avif" class="d-block w-100 h-100 object-fit-cover rounded shadow" alt="Café orgánico">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="container my-5" id="historia">
+        <div class="card shadow-lg border-0 rounded-4 mx-auto" style="max-width: 900px; background: #f8f5f2;">
+            <div class="row g-0 align-items-center">
+                <div class="col-md-7">
+                    <div class="card-body p-5">
+                        <h2 class="card-title text-center mb-4" style="color: #6f4e37; font-family: Georgia, 'Times New Roman', Times, serif;">
+                            Nuestra Historia
+                        </h2>
+                        <p class="card-text fs-5 text-center text-md-start" style="font-family: Georgia, 'Times New Roman', Times, serif;">
+                            Café La Loma nació en 1986 como un pequeño sueño familiar en las montañas cafeteras de Colombia. Inspirados por el amor al café y la tradición de nuestra tierra, comenzamos tostando granos seleccionados a mano en una humilde cocina.<br><br>
+                            Con dedicación y pasión, fuimos creciendo y perfeccionando nuestras recetas, siempre priorizando la calidad y el trato cercano con nuestros clientes.<br><br>
+                            Hoy, más de tres décadas después, seguimos siendo un punto de encuentro para quienes buscan disfrutar de un café auténtico, rodeados de historia y calidez.<br><br>
+                            <strong>¡Gracias por ser parte de nuestra historia!</strong>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-5 text-center">
+                    <img src="../img/tienda.jpg" alt="tienda" class="img-fluid rounded-end-4 shadow mt-4 mt-md-0" style="max-width: 100%; height: auto;">
+                </div>
+            </div>
+        </div>
+    </div>
+    <button id="btnSubir" style="position: fixed; bottom: 20px; right: 20px; display: none; background-color: #6f4e37; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer; color: white; font-size: 24px;">
+    <i class="bi bi-arrow-up-circle"></i>
+    </button>
+
+
+    </body>
+    <script>
+    // Mostrar botón solo cuando haces scroll hacia abajo
+    window.onscroll = function() {
+        const btn = document.getElementById("btnSubir");
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        btn.style.display = "block";
+        } else {
+        btn.style.display = "none";
+        }
+    };
+
+    // Al dar click, sube suavemente hasta arriba
+    document.getElementById("btnSubir").addEventListener("click", function() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+    </script>
+    </html>
