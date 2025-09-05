@@ -35,6 +35,7 @@ $resultado = $conexion->query($sql);
                         <th>Hora</th>
                         <th>Personas</th>
                         <th>Creado En</th>
+                        <th>Celular</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -48,6 +49,7 @@ $resultado = $conexion->query($sql);
                                 <td><?= $fila["hora"] ?></td>
                                 <td><?= $fila["personas"] ?></td>
                                 <td><?= $fila["creado_en"] ?></td>
+                                <td><?= $fila["celular"] ?></td>
                             </tr>
                         <?php endwhile; ?>
                     <?php else: ?>

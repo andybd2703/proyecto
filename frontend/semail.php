@@ -11,7 +11,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST['email'] ?? '';
     $fecha = $_POST['fecha'] ?? '';
     $hora = $_POST['hora'] ?? '';
-    $personas = $_POST['personas'] ?? '';
+    $personas = $_POST['personas'] ?? '';   
+    $celular = $_POST['celular'];
+
 
     if (!$email || !$nombre) {
         die('❌ Faltan datos para enviar el correo.');
@@ -42,6 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <li><strong>Fecha:</strong> $fecha</li>
                 <li><strong>Hora:</strong> $hora</li>
                 <li><strong>Personas:</strong> $personas</li>
+                <li><strong>Celular:</strong> $celular</li>
                 <li><strong>Email:</strong> $email</li>
             </ul>
             <p>¡Te esperamos en Café La Loma!</p>

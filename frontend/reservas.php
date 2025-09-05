@@ -21,9 +21,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $fecha = $_POST['fecha'];
     $hora = $_POST['hora'];
     $personas = $_POST['personas'];
-
-    $stmt = $conexion->prepare("INSERT INTO reservas (nombre, email, fecha, hora, personas) VALUES (?, ?, ?, ?, ?)");
-    $stmt->bind_param("ssssi", $nombre, $email, $fecha, $hora, $personas);
+    $celular = $_POST['celular'];
+$stmt = $conexion->prepare("INSERT INTO reservas (nombre, email, fecha, hora, personas, celular) VALUES (?, ?, ?, ?, ?, ?)");
+    $stmt->bind_param("ssssss", $nombre, $email, $fecha, $hora, $personas, $celular);
 
     if ($stmt->execute()) {
         // Guardado ok, enviamos correo
@@ -50,6 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <li><strong>Hora:</strong> $hora</li>
                     <li><strong>Personas:</strong> $personas</li>
                     <li><strong>Email:</strong> $email</li>
+                    <li><strong>Celular:</strong> $celular</li>
                 </ul>
                 <p>¡Te esperamos en Café La Loma!</p>
             ";
@@ -189,7 +190,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <div class="mb-3">
                     <label for="email" class="form-label">Correo Electrónico</label>
                     <input type="email" class="form-control" id="email" name="email" autocomplete="off" required
-                        pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
+                    pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+
                     <div class="invalid-feedback">
                         Por favor ingresa un correo electrónico válido.
                     </div>
@@ -206,6 +208,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <div class="mb-3">
                     <label for="personas" class="form-label">Número de Personas</label>
                     <input type="number" class="form-control" id="personas" name="personas" min="1" max="20" required>
+                </div>
+                <div class="mb-3">
+                    <label for="celular" class="form-label">Celular</label>
+                    <input type="tel" class="form-control" id="celular" name="celular" pattern="[0-9]{10}" required>
+                    <div class="invalid-feedback">
+                        Ingresa un número de celular válido (10 dígitos).
+                    </div>
                 </div>
                 <button type="submit" class="btn btn-success w-100">Reservar Ahora</button>
             </form>
