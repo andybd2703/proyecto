@@ -153,6 +153,34 @@ $stmt = $conexion->prepare("INSERT INTO reservas (nombre, email, fecha, hora, pe
         .alert-info {
             border-radius: 10px;
         }
+
+        .navbar-nav .nav-link:hover {
+            text-decoration: underline;
+            color: #d2b48c !important; /* Tono crema para resaltar */
+            transition: all 0.3s ease-in-out;
+        }
+        /* Fondo de las tarjetas de productos */
+        .card {
+            background-color: #fffaf0; /* Beige clarito */
+            border: 1px solid #e6dccc;
+        }
+
+        /* Título de productos */
+        .card-title {
+            color: #6f4e37;
+            font-weight: bold;
+        }
+        
+        @media (max-width: 576px) {
+            .navbar-brand img {
+                width: 60px;
+                height: 60px;
+            }
+
+            .navbar-brand {
+                font-size: 1.1rem;
+            }
+        }
     </style>
 </head>
 
