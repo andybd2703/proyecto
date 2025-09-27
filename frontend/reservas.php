@@ -41,18 +41,45 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $mail->addAddress($email, $nombre);
 
             $mail->isHTML(true);
-            $mail->Subject = '✅ TU RESERVA HA SIDO CONFIRMADA';
+            $mail->Subject = 'TU RESERVA HA SIDO CONFIRMADA';
             $mail->Body = "
-                <h2>¡Hola $nombre!</h2>
-                <p>Tu reserva ha sido confirmada con estos datos:</p>
-                <ul>
-                    <li><strong>Fecha:</strong> $fecha</li>
-                    <li><strong>Hora:</strong> $hora</li>
-                    <li><strong>Personas:</strong> $personas</li>
-                    <li><strong>Email:</strong> $email</li>
-                    <li><strong>Celular:</strong> $celular</li>
-                </ul>
-                <p>¡Te esperamos en Café La Loma!</p>
+                <div style='font-family: Georgia, serif; color: #4e342e;'>
+                    <h2>Estimado(a) $nombre,</h2>
+                    <p>
+                        Nos complace informarle que su reserva en <strong>Café La Loma</strong> ha sido confirmada exitosamente.<br>
+                        A continuación, encontrará los detalles de su reserva:
+                    </p>
+                    <table style='background:#f8f4ee; border-radius:8px; padding:15px; margin:15px 0; border:1px solid #e0cfc2;'>
+                        <tr>
+                            <td><strong>Fecha:</strong></td>
+                            <td>$fecha</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Hora:</strong></td>
+                            <td>$hora</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Número de personas:</strong></td>
+                            <td>$personas</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Correo electrónico:</strong></td>
+                            <td>$email</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Celular:</strong></td>
+                            <td>$celular</td>
+                        </tr>
+                    </table>
+                    <p>
+                        Le agradecemos por elegirnos y esperamos brindarle una experiencia memorable.<br>
+                        Si requiere modificar o cancelar su reserva, no dude en contactarnos respondiendo a este correo.
+                    </p>
+                    <p>
+                        Atentamente,<br>
+                        <strong>Equipo Café La Loma</strong>
+                    </p>
+                </div>
             ";
 
             $mail->send();
