@@ -9,27 +9,30 @@
     <link rel="icon" type="image/jpeg" href="../img/LOGOA.png">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <style>
-        .bg-brown {
-            background-color: #6f4e37 !important;
-            /* café oscuro bonito */
-            color: white;
-            /* opcional: para que el texto se vea */
-        }
+        html {
+  scroll-behavior: smooth;
+}
 
-        .navbar-brand {
-            color: white !important;
-            /* Asegura que el texto del logo sea blanco */
+    body{
+            background-color: #fefaf3; /* Crema claro */
+    }
+
+        .bg-brown {
+            background-color: #6f4e37 !important; /* café oscuro bonito */
+            color: white; /* opcional: para que el texto se vea */
+                box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .navbar-brand{
+            color: white !important; /* Asegura que el texto del logo sea blanco */
             font-family: Georgia, 'Times New Roman', Times, serif;
 
         }
 
         .navbar-nav .nav-link {
-            color: white !important;
-            /* Asegura que los enlaces de navegación sean blancos */
+            color: white !important; /* Asegura que los enlaces de navegación sean blancos */
             font-family: Georgia, 'Times New Roman', Times, serif;
 
-        }
-
+        }   
         .navbar-text {
             background-color: #6f4e37;
             color: white;
@@ -41,70 +44,81 @@
             text-align: center;
         }
 
-        .title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-top: 20px;
+        .carousel-inner {
+            height: 350px; /* un poco más bajito para que se vea formal */
+            max-width: 1200px;
+            margin: 0 auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .carousel img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+            border-radius: 10px;
+        }
+        .navbar-nav .nav-link:hover {
+            text-decoration: underline;
+            color: #d2b48c !important; /* Tono crema para resaltar */
+            transition: all 0.3s ease-in-out;
+        }
+        /* Fondo de las tarjetas de productos */
+        .card {
+            background-color: #fffaf0; /* Beige clarito */
+            border: 1px solid #e6dccc;
+        }
+
+        /* Título de productos */
+        .card-title {
             color: #6f4e37;
-            /* Color café oscuro */
+            font-weight: bold;
         }
+        
+        @media (max-width: 576px) {
+            .navbar-brand img {
+                width: 60px;
+                height: 60px;
+            }
 
-        .fuente-contacto {
-            font-family: Georgia, 'Times New Roman', Times, serif;
-            font-size: 1.1rem;
-            color: #4b2e19;
-        }
-
-        .fuente-contacto h3,
-        .fuente-contacto h4 {
-            font-weight: 900;
-            margin-bottom: 1rem;
-            margin-top: 1rem;
-        }
-
-        .fuente-contacto h3 {
-            font-size: 2rem;
-        }
-
-        .fuente-contacto h4 {
-            font-size: 1.3rem;
-        }
-
-        .bg-light {
-            background-color: #f9f6f3 !important;
-        }
-
-        @media (min-width: 768px) {
-            .contacto-separador {
-                border-left: 2px solid #e0d6cf;
+            .navbar-brand {
+                font-size: 1.1rem;
             }
         }
+
     </style>
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg bg-brown">
         <div class="container">
-            <a class="navbar-brand">☕ Café La Loma</a>
-            <button class="navbar-toggler" ...></button>
-            <div class="collapse navbar-collapse" id="navbarText">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Historia</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="productos.html">Productos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contacto.html">Contacto</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="reservas.php">Reservas</a>
-                    </li>
-                </ul>
+            <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="../img/LOGOA.png" alt="Logo" width="100" height="100" class="me-2">
+            Café La Loma
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-lg-end" id="navbarText">
+            <ul class="navbar-nav text-center text-lg-end">
+                <li class="nav-item">
+                <a class="nav-link px-3 d-block d-lg-inline btn btn-outline-light btn-sm mt-2 mt-lg-0 py-2 py-lg-0" href="index.html">Historia</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link px-3 d-block d-lg-inline btn btn-outline-light btn-sm mt-2 mt-lg-0 py-2 py-lg-0" href="productos.html">Productos</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link px-3 d-block d-lg-inline btn btn-outline-light btn-sm mt-2 mt-lg-0 py-2 py-lg-0" href="contacto.html">Contacto</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link px-3 d-block d-lg-inline btn btn-outline-light btn-sm mt-2 mt-lg-0 py-2 py-lg-0" href="reservas.php">Reservas</a>
+                </li>
+            </ul>
             </div>
         </div>
     </nav>
+
 
     <div class="container my-5">
         <h1 class="title">¡Contáctanos!</h1>
