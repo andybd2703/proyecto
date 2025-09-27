@@ -22,8 +22,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $hora = $_POST['hora'];
     $personas = $_POST['personas'];
     $celular = $_POST['celular'];
-$stmt = $conexion->prepare("INSERT INTO reservas (nombre, email, fecha, hora, personas, celular) VALUES (?, ?, ?, ?, ?, ?)");
-    $stmt->bind_param("ssssss", $nombre, $email, $fecha, $hora, $personas, $celular);
+    $stmt = $conexion->prepare("INSERT INTO reservas (nombre, email, fecha, hora, personas, celular) VALUES (?, ?, ?, ?, ?, ?)");
+    $stmt->bind_param("ssssis", $nombre, $email, $fecha, $hora, $personas, $celular);
 
     if ($stmt->execute()) {
         // Guardado ok, enviamos correo
