@@ -78,7 +78,8 @@ $stmt = $conexion->prepare("INSERT INTO reservas (nombre, email, fecha, hora, pe
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reserva Ahora</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-        <link rel="icon" type="image/jpeg" href="../img/logocf.jpg">
+    <link rel="icon" type="image/jpeg" href="../img/LOGOA.png">
+
 
     <style>
         .bg-brown {
@@ -159,21 +160,33 @@ $stmt = $conexion->prepare("INSERT INTO reservas (nombre, email, fecha, hora, pe
 
     <nav class="navbar navbar-expand-lg bg-brown">
         <div class="container">
-            <a class="navbar-brand">☕ Café La Loma</a>
+            <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="../img/LOGOA.png" alt="Logo" width="100" height="100" class="me-2">
+            Café La Loma
+            </a>
+
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText">
-                <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarText">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Historia</a></li>
-                    <li class="nav-item"><a class="nav-link" href="productos.html">Productos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
-                    <li class="nav-item"><a class="nav-link" href="reservas.php">Reservas</a></li>
-                </ul>
+
+            <div class="collapse navbar-collapse justify-content-lg-end" id="navbarText">
+            <ul class="navbar-nav text-center text-lg-end">
+                <li class="nav-item">
+                <a class="nav-link px-3 d-block d-lg-inline btn btn-outline-light btn-sm mt-2 mt-lg-0 py-2 py-lg-0" href="index.html">Historia</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link px-3 d-block d-lg-inline btn btn-outline-light btn-sm mt-2 mt-lg-0 py-2 py-lg-0" href="productos.html">Productos</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link px-3 d-block d-lg-inline btn btn-outline-light btn-sm mt-2 mt-lg-0 py-2 py-lg-0" href="contacto.html">Contacto</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link px-3 d-block d-lg-inline btn btn-outline-light btn-sm mt-2 mt-lg-0 py-2 py-lg-0" href="reservas.php">Reservas</a>
+                </li>
+            </ul>
             </div>
         </div>
     </nav>
-
     <div class="container mt-5">
         <div class="form-reserva">
             <h1 class="text-center mb-4">Reserva Ahora</h1>
